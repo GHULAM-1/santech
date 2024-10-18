@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import NavBar from "@/components/navBar";
+import HamBar from "@/components/hamBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,8 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full max-w-[1440px]`}
       >
+        <div className="hidden md:block ">
+          <NavBar />
+        </div>
+
+        <div className="block md:hidden w-full ">
+          <HamBar />
+        </div>
         {children}
       </body>
     </html>
