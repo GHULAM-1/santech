@@ -22,6 +22,7 @@ interface Service {
 
 interface ServicesProps {
   services: Service[];
+  heading?:string
 }
 
 interface ImageCardProps {
@@ -46,3 +47,13 @@ type ValuesSectionProps = {
   values: ValueCardProps[];
   containerGap?: string;
 };
+
+interface GlossaryItem {
+  title: string;
+  description: string;
+}
+
+interface GlossaryGroup {
+  letter: string;
+  items: GlossaryItem[];
+}

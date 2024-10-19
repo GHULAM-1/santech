@@ -19,7 +19,7 @@ export default function Home() {
       <HomeHero />
       <TrustedBySection />
       <HomeAbout />
-      <Services services={servicesData} />
+      <Services services={servicesData} heading="Our Services" />
       <FeaturedSection
         title="Leading the Future of Real Estate with PropTech Expertise"
         subtitle="Expertise"

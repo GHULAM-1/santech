@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Button } from "./ui/button";
 
-const Services: React.FC<ServicesProps> = ({ services }) => {
+const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services'  }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: string) => {
@@ -22,7 +22,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
   return (
     <div className="py-12 px-6 md:px-20 bg-white">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Our Services</h2>
+        <h2 className="text-3xl font-bold text-gray-800">{heading}</h2>
 
         {/* Top Right Buttons */}
         <div className="flex gap-4 items-center">

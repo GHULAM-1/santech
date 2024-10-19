@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
               paraline="Serving over 50 clients globally, Santech has helped businesses across multiple industries scale."
             />
 
-            <div className="-mt-[70px]">
+            <div className="-mt-[140px]">
           <SquareCard
             name={firstTestimonial.name}
             role={firstTestimonial.role}

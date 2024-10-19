@@ -1,6 +1,8 @@
+'use client'
 import ClientService from "@/components/clientService";
 import ConatctCards from "@/components/contactus/cards";
 import Hero from "@/components/hero";
+import CalCom from "@/components/ui/calendar";
 import React from "react";
 
 export default function ContactUs() {
@@ -11,10 +13,7 @@ export default function ContactUs() {
         description="Got questions, inquiries, or need support? We're here to help, anytime!"
         heading="Contact Us"
       />
-      <ClientService
-        containerStyle={{ marginTop: "-200px" }}
-        className="flex justify-center border-[1px] ml-60 items-center"
-      />
+      <CalCom/>
       <ConatctCards />
 
       <div className="flex justify-center w-screen mt-8 px-[80px] py-[40px]">

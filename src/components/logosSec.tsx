@@ -13,7 +13,7 @@ const TrustedBySection = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center py-8 bg-white shadow-sm", 
+        "flex flex-col items-center px-[80px] py-[48px] bg-white shadow-sm", 
         containerClass
       )}
     >
@@ -22,7 +22,7 @@ const TrustedBySection = ({
       </p>
       <div
         className={cn(
-          "flex flex-wrap justify-center items-center gap-8", // Added `flex`
+          "flex flex-wrap justify-between items-center gap-[80px]", 
           logoDiv
         )}
       >
@@ -31,7 +31,7 @@ const TrustedBySection = ({
             key={company.name}
             src={company.logo}
             alt={company.alt}
-            className={cn("w-[135px] object-contain", imageClass)}
+            className={cn("w-[135px] object-contain ", imageClass)}
           />
         ))}
       </div>
