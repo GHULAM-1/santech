@@ -16,19 +16,20 @@ export default function AboutPage() {
         showButton={false}
         showClients={false}
       />
-      <div className="-mt-[25%] p-[60px]">
+      <div className="-mt-0 lg:-mt-[25%] p-[30px] lg:p-[60px]">
         <AboutSolutions />
       </div>
 
       <TrustedBySection
         title="Trusted by Innovative Startups"
-        containerClass="bg-gray-100 flex-col px-[80px] py-[48px]"
-        logoDiv="flex justify-between gap-[90px]" 
-        imageClass="w-[120px] hover:scale-110 transition-transform"
-        paraClass="w-full text-[36px] font-[700]"
+        containerClass="bg-gray-100 flex-col  md:px-[80px] md:py-[48px]"
+        logoDiv="flex justify-between gap-[20px] md:gap-[90px]" 
+        imageClass="w-[90px] md:w-[120px] hover:scale-110 transition-transform"
+        paraClass="w-full text-[26px] md:text-[36px] font-[700]"
       />
+      <div className="hidden lg:block">
       <OverlappingSection/>
-
+      </div>
       <ValuesSection values={valuesData}/>
 
       <LetsTalk/>

@@ -9,13 +9,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
   extraClass = '',
 }) => {
   return (
-    <div className={`rounded-lg shadow-md overflow-hidden -mt-10 ${extraClass}`}>
+    <div className={`rounded-lg shadow-md overflow-hidden -mt-0 md:-mt-10 ${extraClass}`}>
       <Image
         src={image}
         alt={description || 'Card image'}
         width={300}
         height={200}
-        className="object-cover w-full h-[150px] md:h-[290px]"
+        className="object-cover w-full  md:h-[290px]"
       />
       {description && (
         <p className="p-4 text-gray-600 text-md">{description}</p>

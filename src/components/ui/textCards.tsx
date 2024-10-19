@@ -22,7 +22,7 @@ const TextCard: React.FC<TextCardProps> = ({
         bgColor ? bgColor : 'bg-green-100'
       } h-auto flex flex-col justify-between`}
     >
-      <div>
+      <div className='lg:w-auto w-[600px]'>
         <h3 className="text-xl font-semibold text-gray-800 mb-4">{title}</h3>
         <div className="text-gray-600 text-md">
           {description?.split('\n').map((line, index) => (

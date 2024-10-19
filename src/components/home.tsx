@@ -16,8 +16,12 @@ import LetsTalk from "./letsTalk";
 export default function Home() {
   return (
     <>
+    
       <HomeHero />
-      <TrustedBySection />
+      <TrustedBySection 
+      paraClass="font-[600] text-[36px] self-start "
+      imageClass=" hover:scale-110 transition-transform"
+      />
       <HomeAbout />
       <Services services={servicesData} heading="Our Services" />
       <FeaturedSection

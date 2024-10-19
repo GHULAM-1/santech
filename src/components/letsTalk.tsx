@@ -1,27 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 export default function LetsTalk() {
   return (
-    <div>
-        <div
-      className="relative flex items-center justify-between px-[80px] py-[30px] bg-white"
-      style={{
-        backgroundImage: 'url("/CTA.png")',
-        backgroundPosition: 'right',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-      }}
-    >
+    <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between px-[30px] py-[40px] md:px-[80px] md:py-[60px] bg-white">
       {/* Left Text Section */}
-      <div className="space-y-4">
-        <h2 className="text-[36px] font-semibold text-[#16339C]">
+      <div className="space-y-4 z-10">
+        <h2 className="text-2xl md:text-[36px] font-semibold text-[#16339C] leading-snug">
           Ready to Transform Your Business?
         </h2>
-        <button className="flex items-center text-[36px] font-medium text-black hover:underline">
+        <button className="flex items-center text-xl md:text-[36px] font-medium text-black hover:underline">
           Let’s Talk <span className="ml-2">→</span>
         </button>
       </div>
+      <img
+        src="/CTA.png"
+        alt="CTA Background"
+        className="absolute inset-0 w-full h-full  bg-no-repeat object-cover -z-1"
+      />
     </div>
-    </div>
-  )
+  );
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface RectangleCardProps {
   heading?: string;  // Optional heading
   headimg?: string;  // Optional image for heading
   img?: string;      // Optional main image
-  paraline?: string; // Optional paragraph text
+  paraline?: string;
+  container?:string // Optional paragraph text
 }
 
 export default function RectangleCard({
@@ -13,24 +15,27 @@ export default function RectangleCard({
   headimg,
   img,
   paraline,
+  container,
 }: RectangleCardProps) {
   return (
-    <div className="w-[273px] h-[150px] p-4 bg-white rounded-lg shadow-md flex flex-col gap-4">
+    <div className={cn("w-[273px] h-[150px] p-4 bg-white rounded-lg shadow-md flex flex-col gap-4",container)}>
       {/* Optional Heading Section */}
+
+      {headimg && (
+        <Image
+          src={headimg}
+          alt="Header Image"
+          width={60}
+          height={60}
+          className="rounded-full"
+        />
+      )}
       {heading && (
         <h2 className="text-xl font-semibold text-green-600">{heading}</h2>
       )}
 
       {/* Optional Header Image */}
-      {headimg && (
-        <Image
-          src={headimg}
-          alt="Header Image"
-          width={40}
-          height={40}
-          className="rounded-full"
-        />
-      )}
+    
 
       {/* Optional Main Image */}
       {img && (

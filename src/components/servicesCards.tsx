@@ -26,19 +26,19 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
 
         {/* Top Right Buttons */}
         <div className="flex gap-4 items-center">
-          <Button className="flex items-center gap-2 border-[1px] border-[#BBBEC3] text-[#16339C]">
+          <Button className="hidden md:flex items-center gap-2 border-[1px] bg-white border-[#BBBEC3] text-[#16339C]">
             All Services <FaArrowRight className="align-middle" />
           </Button>
 
           <button
             onClick={() => scroll("left")}
-            className="border p-3 rounded-full bg-white shadow-md hover:bg-gray-100"
+            className="hidden md:block border p-3 rounded-full bg-white shadow-md hover:bg-gray-100"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="border p-3 rounded-full bg-white shadow-md hover:bg-gray-100"
+            className="hidden md:block border p-3 rounded-full bg-white shadow-md hover:bg-gray-100"
           >
             <FaArrowRight />
           </button>
@@ -46,15 +46,15 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
       </div>
 
       {/* Scrollable Services Container */}
-      <div className="relative">
+      <div className="relative ">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-hidden no-scrollbar scroll-smooth"
+          className="flex flex-col items-center md:flex-row gap-6 overflow-x-hidden no-scrollbar scroll-smooth "
         >
           {services.map((service) => (
             <div
               key={service.id}
-              className=" w-[305px] h-[300px] p-6 border-[2px] border-[#BBBEC3]  shadow-sm hover:shadow-lg transition-shadow"
+              className=" w-[305px] md:min-w-[310px] h-[300px] p-6 border-[2px] border-[#BBBEC3]  shadow-sm hover:shadow-lg transition-shadow"
             >
               <div className="text-4xl text-[#16339C] mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-[#16339C] mb-2">
@@ -70,6 +70,9 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
           ))}
         </div>
       </div>
+      <Button className="md:hidden  flex items-center gap-2 border-[1px] bg-white border-[#BBBEC3] text-[#16339C] m-8">
+            All Services <FaArrowRight className="align-middle" />
+          </Button>
     </div>
   );
 };

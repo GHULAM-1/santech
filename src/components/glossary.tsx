@@ -4,9 +4,9 @@ import { glossaryData } from '@/data/glossaryData';
 
 const Glossary: React.FC = () => {
   return (
-    <div className="px-[80px] py-[48px]">
+    <div className="px-[30px] py-[10px] md:px-[80px] md:py-[48px]">
       {glossaryData.map((group, index) => (
-        <div key={index} className="flex items-start  gap-[90px] mb-16">
+        <div key={index} className="flex items-start gap-[50px] md:gap-[90px] mb-16">
           {/* Letter Styling */}
           <h2 className="text-[48px] font-normal text-black min-w-[50px]">
             {group.letter}

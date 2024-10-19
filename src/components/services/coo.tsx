@@ -6,9 +6,9 @@ import { FaCheck } from 'react-icons/fa'; // Using icons from react-icons
 import { outcomes } from '@/data/cooData';
 const COOServiceSection = () => {
   return (
-    <div className="bg-[#F5F7FA] p-[80px] flex flex-col md:flex-row items-center justify-between gap-12">
+    <div className="bg-[#F5F7FA] p-[30px] lg:p-[80px] flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
       {/* Left Side - Text Content */}
-      <div className="md:w-1/2">
+      <div className="w-full lg:w-1/2">
         <h2 className="text-3xl font-semibold text-gray-900 mb-4">
           Key Outcomes with COO as a Service
         </h2>
@@ -32,13 +32,13 @@ const COOServiceSection = () => {
       </div>
 
       {/* Right Side - Image */}
-      <div className="md:w-1/2">
+      <div className="w-full lg:w-1/2 md:block hidden">
         <Image
           src="/services/coo.png" // Replace with the actual image path
           alt="COO Service Meeting"
           width={600}
           height={400}
-          className="rounded-xl shadow-lg"
+          className="rounded-xl shadow-lg w-full object-cover lg:h-[400px] h-[300px] lg:w-[600px]"
         />
       </div>
     </div>

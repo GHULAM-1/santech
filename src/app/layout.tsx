@@ -29,13 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full max-w-[1440px]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <div className="hidden md:block ">
+        <div className="hidden lg:block ">
           <NavBar />
         </div>
 
-        <div className="block md:hidden w-full ">
+        <div className="block px-[80px] lg:hidden w-full ">
           <HamBar />
         </div>
         {children}

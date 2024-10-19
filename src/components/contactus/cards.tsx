@@ -6,8 +6,8 @@ import React from 'react'
 export default function ConatctCards() {
   return (
     <>
-    <div className='flex justify-between px-[80px] items-center py-[40px]'>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+    <div className='flex flex-col lg:flex-row justify-between px-[20px] py-[9px] lg:px-[80px] items-center lg:py-[40px]'>
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-stretch gap-9 lg:gap-6 p-8">
       {contactCardData.map((card, index) => (
         <TextCard
           key={index}
@@ -19,7 +19,7 @@ export default function ConatctCards() {
       ))}
     </div>
 
-    <img className='w-[45%] h-[400px]' src="/about/overlap.png" alt="" />
+    <img className='w-full h-full lg:w-[45%] lg:h-[400px]' src="/about/overlap.png" alt="" />
     </div>
     </>
   )
