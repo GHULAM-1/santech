@@ -6,7 +6,7 @@ const TextCard: React.FC<TextCardProps> = ({ title, description, bgColor }) => {
     <div
       className={`p-6 rounded-lg shadow-md ${
         bgColor ? bgColor : 'bg-green-100'
-      } h-[188px]`}
+      } h-[188px] -mt-1`}
     >
       <h3 className="text-xl font-semibold text-gray-800 mb-8">{title}</h3>
       <p className="text-gray-600 text-md">{description}</p>

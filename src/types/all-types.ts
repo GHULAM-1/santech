@@ -34,3 +34,15 @@ interface TextCardProps {
   description?: string;
   bgColor?: string;
 }
+// Props type for individual value cards
+type ValueCardProps = {
+  number: string;
+  title: string;
+  bgImage: string;
+};
+
+// Props type for the ValuesSection
+type ValuesSectionProps = {
+  values: ValueCardProps[];
+  containerGap?: string;
+};
