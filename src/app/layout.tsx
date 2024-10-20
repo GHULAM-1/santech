@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased overflow-x-hidden`}
       >
         <div className="hidden lg:block">
           <NavBar />

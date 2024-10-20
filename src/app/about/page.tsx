@@ -9,14 +9,15 @@ import LetsTalk from "@/components/letsTalk";
 export default function AboutPage() {
   return (
     <>
-      <Hero
+    
+      {/* <Hero
         backgroundImage="/aboutHero.png"
         heading="About Us"
         description="Got questions, inquiries, or need support? We're here to help, anytime!"
         showButton={false}
         showClients={false}
-      />
-      <div className="-mt-0 lg:-mt-[25%] p-[30px] lg:p-[60px]">
+      /> */}
+      <div className=" p-[24px] md:p-[32px] lg:p-[80px]">
         <AboutSolutions />
       </div>
 

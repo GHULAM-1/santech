@@ -17,14 +17,15 @@ const TextCard: React.FC<TextCardProps> = ({
   socialIcons,
 }) => {
   return (
+    
     <div
-      className={`lg:px-[32px] lg:py-[48px] bg-[#F8F9F9] gap-[20px] flex flex-col lg:w-[305px] lg:h-[176px] border border-[#BBBEC3]`}
+      className={`px-[32px] rounded-[8px] py-[48px] bg-[#F8F9F9] gap-[20px] flex flex-col xl:w-[305px] xl:h-[176px] lg:w-[234px] lg:h-[160px] border border-[#BBBEC3] `}
     >
-      <div className=''>
+      <div className='w-[200px]'>
         <h3 className="text-xl font-semibold text-gray-800 mb-[8px]">{title}</h3>
-        <div className="text-gray-600 text-md">
+        <div className="text-[#040817] text-[16px] font-normal leading-[24px]">
           {description?.split('\n').map((line, index) => (
-            <p key={index}>{line}</p>
+            <p className="text-[#040817] text-[14px] font-normal leading-[24px]" key={index}>{line}</p>
           ))}
         </div>
       {socialIcons && (
@@ -36,6 +37,7 @@ const TextCard: React.FC<TextCardProps> = ({
       )}
       </div>
     </div>
+   
   );
 };
 
