@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import HomeHero from "./homeHero";
 import TrustedBySection from "./logosSec";
@@ -36,12 +36,11 @@ export default function Home() {
       <div className=" p-[24px]">
         <IndustrySolutions />
       </div>
-      <TestimonialsSection/>
+      <TestimonialsSection />
 
-      <BookMeeting/>
-      
-      <LetsTalk/>
-     
+      <BookMeeting />
+
+      <LetsTalk />
     </>
   );
 }
