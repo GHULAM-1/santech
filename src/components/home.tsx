@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import HomeHero from "./homeHero";
 import TrustedBySection from "./logosSec";
@@ -16,11 +16,10 @@ import LetsTalk from "./letsTalk";
 export default function Home() {
   return (
     <>
-    
-      <HomeHero />
-      <TrustedBySection 
-      paraClass="font-[600] text-[36px] self-start "
-      imageClass=" hover:scale-110 transition-transform"
+      {/* <HomeHero /> */}
+      <TrustedBySection
+        paraClass="font-[600] text-[36px] self-start "
+        imageClass=" hover:scale-110 transition-transform"
       />
       <HomeAbout />
       <Services services={servicesData} heading="Our Services" />
@@ -36,12 +35,11 @@ export default function Home() {
       <div className="p-8">
         <IndustrySolutions />
       </div>
-      <TestimonialsSection/>
+      <TestimonialsSection />
 
-      <BookMeeting/>
-      
-      <LetsTalk/>
-     
+      <BookMeeting />
+
+      <LetsTalk />
     </>
   );
 }
