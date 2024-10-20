@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react'
 
 interface SectionProps {
   title: string;
@@ -18,32 +19,32 @@ export default function FeaturedSection({
   image,
 }: SectionProps) {
   return (
-    <div className="flex flex-col lg:flex-row lg:h-screen bg-blue-900">
+    <div className="flex flex-col lg:flex-row lg:h-screen bg-primary">
 
       {/* Text Content Section */}
-      <div className="w-full md:w-[750px] flex flex-col justify-center px-10 md:px-20 py-10 text-white">
-        <span className="bg-green-100 text-[#037940] px-4 py-1 rounded-full mb-4 w-max text-sm font-semibold">
+      <div className="w-full md:w-[750px] flex flex-col justify-center p-[32px] lg:px-[80px]  text-white gap-[16px]">
+        <span className="bg-green-100 text-[#037940] p-[8px]  rounded-full  text-[12px] font-semibold w-[70px] h-[32px] ">
           {subtitle}
         </span>
-        <h1 className="text-4xl md:text-[36px] font-bold leading-tight mb-6">
+        <h1 className="text-[24px] md:text-[36px] text-#FDFCFB font-[600] lg:leading-[40px] leading-[32px] ">
           {title}
         </h1>
-        <p className="text-lg leading-relaxed mb-8">{description}</p>
+        <p className="text-[16px] leading-[24px] font-[400]  text-#FDFCFB">{description}</p>
 
-        <Button className="bg-[#05DC75] w-[110px] px-[20px] py-[12px] text-[14px] hover:bg-green-600 text-black font-medium rounded-none">
-          {buttonText} <span>&rarr;</span>
+        <Button className="bg-accent w-[110px] px-[20px] py-[12px] text-[14px] hover:bg-green-600 text-black font-medium rounded-[4px]">
+          {buttonText} <span><ArrowRight/></span>
         </Button>
       </div>
 
       {/* Image Section */}
-      <div className="w-full lg:w-1/2 relative h-[500px] lg:h-auto">
+      <div className="w-full lg:w-1/2 relative h-[360px] lg:h-auto">
         <Image
           src={image}
           alt="Real Estate"
           layout="fill"
           objectFit="cover"
           priority
-          className="rounded-lg"
+          className="rounded-lg lg:w-[720px] lg:h-full w-full h-[360px]"
         />
       </div>
     </div>

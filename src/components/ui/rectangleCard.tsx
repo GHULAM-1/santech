@@ -7,7 +7,8 @@ interface RectangleCardProps {
   headimg?: string;  // Optional image for heading
   img?: string;      // Optional main image
   paraline?: string;
-  container?:string // Optional paragraph text
+  container?:string;
+  headclr?:string // Optional paragraph text
 }
 
 export default function RectangleCard({
@@ -16,9 +17,10 @@ export default function RectangleCard({
   img,
   paraline,
   container,
+  headclr,
 }: RectangleCardProps) {
   return (
-    <div className={cn("w-[273px] h-[150px] p-4 bg-white rounded-lg shadow-md flex flex-col gap-4",container)}>
+    <div className={cn("w-[272px] h-[160px] p-4 bg-white rounded-[8px] shadow-md flex flex-col gap-4 justify-between",container)}>
       {/* Optional Heading Section */}
 
       {headimg && (
@@ -31,7 +33,7 @@ export default function RectangleCard({
         />
       )}
       {heading && (
-        <h2 className="text-xl font-semibold text-green-600">{heading}</h2>
+        <h2 className={cn("text-[24px] font-[400] text-green-600",headclr)}>{heading}</h2>
       )}
 
       {/* Optional Header Image */}
@@ -50,7 +52,7 @@ export default function RectangleCard({
 
       {/* Optional Paragraph Text */}
       {paraline && (
-        <p className="text-gray-700 text-[14px] ">{paraline}</p>
+        <p className="text-[#040817] text-[14px] font-[400] leading-[20px] ">{paraline}</p>
       )}
     </div>
   );

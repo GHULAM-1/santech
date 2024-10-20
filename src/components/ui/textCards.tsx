@@ -13,30 +13,28 @@ interface TextCardProps {
 const TextCard: React.FC<TextCardProps> = ({
   title,
   description,
-  bgColor,
+ 
   socialIcons,
 }) => {
   return (
     <div
-      className={`p-6 rounded-lg shadow-md ${
-        bgColor ? bgColor : "bg-green-100"
-      } h-auto flex flex-col justify-between`}
+      className={`lg:px-[32px] lg:py-[48px] bg-[#F8F9F9] gap-[20px] flex flex-col lg:w-[305px] lg:h-[176px] border border-[#BBBEC3]`}
     >
-      <div className='lg:w-auto w-[600px]'>
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">{title}</h3>
+      <div className=''>
+        <h3 className="text-xl font-semibold text-gray-800 mb-[8px]">{title}</h3>
         <div className="text-gray-600 text-md">
           {description?.split('\n').map((line, index) => (
             <p key={index}>{line}</p>
           ))}
         </div>
-      </div>
       {socialIcons && (
-        <div className="flex mt-4 gap-3">
+        <div className="flex  gap-3">
           {socialIcons.map((icon, index) => (
             <span key={index}>{icon}</span>
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 };

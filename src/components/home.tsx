@@ -16,10 +16,11 @@ import LetsTalk from "./letsTalk";
 export default function Home() {
   return (
     <>
+    
       {/* <HomeHero /> */}
-      <TrustedBySection
-        paraClass="font-[600] text-[36px] self-start "
-        imageClass=" hover:scale-110 transition-transform"
+      <TrustedBySection 
+      paraClass="font-[600] leading-[32px] text-[24px] self-start "
+      imageClass=" hover:scale-110 transition-transform"
       />
       <HomeAbout />
       <Services services={servicesData} heading="Our Services" />
@@ -32,7 +33,7 @@ export default function Home() {
       />
       <WhyChooseUs />
 
-      <div className="p-8">
+      <div className=" p-[24px]">
         <IndustrySolutions />
       </div>
       <TestimonialsSection />

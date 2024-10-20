@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { IconType } from 'react-icons'; // Import IconType from react-icons
+import { IconType } from 'react-icons';
+import { cn } from '@/lib/utils'; // Import IconType from react-icons
 
 interface SquareCardProps {
   name?: string;
@@ -12,6 +13,7 @@ interface SquareCardProps {
   fullimg?: string; 
   icon?: IconType; 
   title?: string;
+  container?:string;
 }
 
 export default function SquareCard({
@@ -22,13 +24,15 @@ export default function SquareCard({
   fullimg,
   icon: Icon, // Destructure the icon for rendering
   title,
+  container,
 }: SquareCardProps) {
   return (
     <div
-      className={`w-[268px] border rounded-lg shadow-md overflow-hidden bg-white ${
-        fullimg ? 'p-0' : 'p-4'
-      }`}
-    >
+    className={cn(
+      "w-[273px]  rounded-[8px] shadow-md overflow-hidden bg-white", container,
+      fullimg ? "p-0" : "p-[32px]"
+    )}
+  >
       {fullimg ? (
         // Full image covers the entire card
         <Image
@@ -39,7 +43,7 @@ export default function SquareCard({
           className="object-cover w-full h-full"
         />
       ) : (
-        <div className="flex flex-col gap-4 items-start">
+        <div className="flex flex-row items-center gap-4 ">
           {avatar && (
             <Image
               src={avatar}
@@ -51,23 +55,25 @@ export default function SquareCard({
           )}
 
           {/* Optional Icon for New Design */}
+          
           {Icon && (
             <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-              <Icon className="text-white w-6 h-6" /> {/* Icon rendering */}
+              <Icon className="text-white w-[40px] h-[40px]" /> {/* Icon rendering */}
             </div>
           )}
 
           <div>
-            {name && <h4 className="text-lg font-semibold">{name}</h4>}
-            {role && <p className="text-sm text-gray-500">{role}</p>}
+            {name && <h4 className="text-[14px]  font-[400] leading-[20px]">{name}</h4>}
+            {role && <p className="text-[12px] font-[400] leading-[16px] text-[#0F0C00]">{role}</p>}
             {title && <h3 className="text-xl font-semibold mb-4">{title}</h3>}
-            {description && (
-              <p className="mt-2 mb-6 text-sm text-gray-700 leading-snug">
-                {description}
-              </p>
-            )}
           </div>
-        </div>
+          </div>
+      
+      )}
+      {description && (
+        <p className=" font-[400] text-[16px] mt-4 text-gray-700 leading-[24px]">
+          {description}
+        </p>
       )}
     </div>
   );
