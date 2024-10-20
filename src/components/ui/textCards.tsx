@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 // Define prop types for the TextCard
 interface TextCardProps {
@@ -19,7 +19,7 @@ const TextCard: React.FC<TextCardProps> = ({
   return (
     <div
       className={`p-6 rounded-lg shadow-md ${
-        bgColor ? bgColor : 'bg-green-100'
+        bgColor ? bgColor : "bg-green-100"
       } h-auto flex flex-col justify-between`}
     >
       <div className='lg:w-auto w-[600px]'>
