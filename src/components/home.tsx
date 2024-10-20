@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
     
-      <HomeHero />
+      {/* <HomeHero /> */}
       <TrustedBySection 
       paraClass="font-[600] text-[36px] self-start "
       imageClass=" hover:scale-110 transition-transform"

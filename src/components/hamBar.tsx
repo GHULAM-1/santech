@@ -45,7 +45,7 @@ export default function HamBar() {
       {/* Navbar Header */}
       <div className="flex items-center text-white w-full justify-between py-3 h-[12vh] border-b-[1px] border-neutral-400 border-opacity-25 mb-5">
         <div
-          className="img w-[157.72px] cursor-pointer"
+          className="img w-full cursor-pointer"
           onClick={() => handleNavigation("/")}
         >
           <img src="/logo.png" alt="Santech Logo" />
