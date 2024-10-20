@@ -6,16 +6,17 @@ const ValuesSection: React.FC<ValuesSectionProps> = ({
   containerGap = "6",
 }) => {
   return (
-    <div className="px-[80px] py-[40px]">
+    <div className="px-[30px] py-[10px] lg:px-[80px] lg:py-[40px]">
       <h2 className="text-3xl font-bold mb-8">Our Values</h2>
-      <div className={`flex justify-center gap-${containerGap}`}>
+      <div className={`flex flex-wrap justify-center gap-${containerGap}`}>
         {values.map((value, index) => (
           <div
             key={index}
-            className="flex flex-col justify-start p-5 gap-[24px]  text-white bg-cover bg-center rounded-lg"
+            className="
+              flex flex-col justify-start p-5 gap-[24px] 
+              text-white bg-cover bg-center rounded-lg 
+              w-[300px] lg:w-[250px] h-[400px]"
             style={{
-              width: "250px",
-              height: "400px",
               backgroundImage: `url(${value.bgImage})`,
             }}
           >

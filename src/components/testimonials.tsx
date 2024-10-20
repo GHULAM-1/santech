@@ -40,9 +40,9 @@ export default function TestimonialsSection() {
   const firstTestimonial = testimonials[0]; // Extract the first testimonial
 
   return (
-    <div className="px-[80px] flex items-center py-[40px] gap-[36px] bg-[#EAEBEC]">
+    <div className="px-[80px] flex lg:flex-row flex-col-reverse items-center py-[40px] gap-[36px] bg-[#EAEBEC]">
       <div className="flex flex-col gap-6 ">
-        <div className="flex  gap-4">
+        <div className="flex  flex-col md:flex-row gap-4">
           <SquareCard
             name={firstTestimonial.name}
             role={firstTestimonial.role}
@@ -55,13 +55,14 @@ export default function TestimonialsSection() {
           />
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
             <RectangleCard
-              heading="50+"
-              paraline="Serving over 50 clients globally, Santech has helped businesses across multiple industries scale."
+               headimg="/Rating.png"
+               paraline="Serving over 50 clients globally, Santech has helped businesses across multiple industries scale."
+               heading="upwork"
             />
 
-            <div className="-mt-[70px]">
+            <div className="-mt-0 md:-mt-[140px]">
           <SquareCard
             name={firstTestimonial.name}
             role={firstTestimonial.role}
@@ -73,7 +74,7 @@ export default function TestimonialsSection() {
 
       </div>
 
-      <p className="text-[23px] mt-8 font-[400]">At Santech, we pride ourselves on delivering top-tier solutions that not only meet but exceed client expectations. Here’s what some of our satisfied clients have to say about their experience with us.</p>
+      <p className="text-[23px] w-full md:w-[70%]  mt-8 lg:mb-0 mb-6 md:mb-32 font-[400]">At Santech, we pride ourselves on delivering top-tier solutions that not only meet but exceed client expectations. Here’s what some of our satisfied clients have to say about their experience with us.</p>
     </div>
   );
 }

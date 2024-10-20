@@ -5,7 +5,7 @@ import React from "react";
 // Define prop types for the TextCard
 interface TextCardProps {
   title: string;
-  description: string | undefined;
+  description: string|undefined;
   bgColor?: string;
   socialIcons?: React.ReactNode[]; // Optional prop for social icons
 }
@@ -22,10 +22,10 @@ const TextCard: React.FC<TextCardProps> = ({
         bgColor ? bgColor : "bg-green-100"
       } h-auto flex flex-col justify-between`}
     >
-      <div>
+      <div className='lg:w-auto w-[600px]'>
         <h3 className="text-xl font-semibold text-gray-800 mb-4">{title}</h3>
         <div className="text-gray-600 text-md">
-          {description?.split("\n").map((line, index) => (
+          {description?.split('\n').map((line, index) => (
             <p key={index}>{line}</p>
           ))}
         </div>

@@ -12,8 +12,9 @@ export default function Hero({
   showClients = false,
 }: PageHeadingProps) {
   return (
+    
     <div
-      className="hero-section flex flex-col justify-start items-start h-screen w-full px-[80px] md:px-12"
+      className="hero-section flex flex-col justify-start items-start  lg:h-screen px-[80px] md:px-12"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "contain",
