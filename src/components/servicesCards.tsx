@@ -3,13 +3,13 @@ import React, { useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Button } from "./ui/button";
 
-const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services'  }) => {
+const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: string) => {
     if (scrollContainerRef.current) {
       const { current } = scrollContainerRef;
-      const scrollAmount = current.clientWidth; // Scroll by the width of the container
+      const scrollAmount = current.clientWidth;
 
       if (direction === "left") {
         current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -20,12 +20,15 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
   };
 
   return (
-    <div className="py-12 px-6 md:px-20 bg-white">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">{heading}</h2>
+    <div className="md:py-[80px] lg:px-[80px] md:px-[32px] px-[24px] py-0 bg-white">
+      {/* Heading Section */}
+      <div className="flex lg:flex-row lg:justify-between flex-col items-center py-[24px]">
+        <h2 className="text-[24px] lg:text-[36px] font-[600] text-center text-gray-800">
+          {heading}
+        </h2>
 
         {/* Top Right Buttons */}
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4  items-center">
           <Button className="hidden md:flex items-center gap-2 border-[1px] bg-white border-[#BBBEC3] text-[#16339C]">
             All Services <FaArrowRight className="align-middle" />
           </Button>
@@ -46,33 +49,34 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
       </div>
 
       {/* Scrollable Services Container */}
-      <div className="relative ">
+      <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="flex flex-col items-center md:flex-row gap-6 overflow-x-hidden no-scrollbar scroll-smooth "
+          className="flex flex-col items-center md:flex-row gap-6 overflow-x-hidden no-scrollbar scroll-smooth"
         >
           {services.map((service) => (
             <div
               key={service.id}
-              className=" w-[305px] md:min-w-[310px] h-[300px] p-6 border-[2px] border-[#BBBEC3]  shadow-sm hover:shadow-lg transition-shadow"
+              className="w-[272px] md:w-[305px] md:min-w-[310px] h-[400px] p-6 border-[2px] border-[#BBBEC3] shadow-sm hover:shadow-lg transition-shadow"
             >
-              <div className="text-4xl text-[#16339C] mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-[#16339C] mb-2">
+              <div className="text-6xl w-[80px] h-[80px] text-[#16339C] pb-[32px]">{service.icon}</div>
+              <h3 className="text-[24px] font-semibold text-[#16339C] leading-[32px]">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <div className="flex mt-20 justify-end">
-                <button className="bg-[#05DC75] w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600">
-                  <FaArrowRight className="text-black" />
+              <p className="text-[16px] text-black leading-[24px] font-[400]">{service.description}</p>
+              <div className="flex justify-end items-end mt-28">
+                <button className="bg-accent w-[48px] h-[48px] self-end rounded-full flex items-center justify-center hover:bg-accent">
+                  <FaArrowRight className="text-[#040817]" />
                 </button>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <Button className="md:hidden  flex items-center gap-2 border-[1px] bg-white border-[#BBBEC3] text-[#16339C] m-8">
-            All Services <FaArrowRight className="align-middle" />
-          </Button>
+
+      <Button className="md:hidden flex items-center gap-2 border-[1px] bg-white border-[#BBBEC3] text-[#16339C] my-5">
+        All Services <FaArrowRight className="align-middle" />
+      </Button>
     </div>
   );
 };

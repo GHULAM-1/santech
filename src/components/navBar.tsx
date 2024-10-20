@@ -16,7 +16,7 @@ export default function NavBar() {
           </div>
         </div>
         <div>
-          <Button className="bg-[#16339C] text-[14px]">
+          <Button className="bg-[#16339C] text-[14px] text-white">
             Get Started
             <ArrowRight />
           </Button>

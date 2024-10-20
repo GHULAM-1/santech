@@ -1,5 +1,5 @@
 "use client";
-import { Equal, X, ChevronDown } from "lucide-react";
+import { Equal, X, ChevronDown ,Menu  } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
@@ -43,15 +43,15 @@ export default function HamBar() {
   return (
     <>
       {/* Navbar Header */}
-      <div className="flex items-center text-white w-full justify-between py-3 h-[12vh] border-b-[1px] border-neutral-400 border-opacity-25 mb-5">
+      <div className="flex items-center px-[24px] text-white w-full justify-between py-3 h-[64px] border-b-[1px] border-neutral-400 border-opacity-25 ">
         <div
           className="img w-full cursor-pointer"
           onClick={() => handleNavigation("/")}
         >
-          <img src="/logo.png" alt="Santech Logo" />
+          <img className="w-[115px] h-[23px]" src="/logo.png" alt="Santech Logo" />
         </div>
-        <div className="flex items-center gap-8 text-[#16339C]">
-          <Equal
+        <div className="flex items-center gap-8 text-primary">
+          <Menu
             className={`${!isNavOpen ? "flex" : "hidden"} cursor-pointer`}
             onClick={() => setIsNavOpen(true)}
           />

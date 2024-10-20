@@ -1,19 +1,30 @@
+// layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Open_Sans } from "next/font/google"; // Import Open Sans from Google Fonts
 import "./globals.css";
 import NavBar from "@/components/navBar";
 import HamBar from "@/components/hamBar";
 import Footer from "@/components/footer";
 
+// Local fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+// Open Sans font configuration
+const openSans = Open_Sans({
+  subsets: ["latin"], // Adjust subset if needed
+  variable: "--font-open-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,23 +34,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased`}
       >
-        <div className="hidden lg:block ">
+        <div className="hidden lg:block">
           <NavBar />
         </div>
 
-        <div className="block px-[80px] lg:hidden w-full ">
+        <div className="block  lg:hidden w-full">
           <HamBar />
         </div>
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
