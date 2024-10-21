@@ -14,6 +14,7 @@ interface SquareCardProps {
   icon?: IconType; 
   title?: string;
   container?:string;
+  flexprop?:string
 }
 
 export default function SquareCard({
@@ -25,6 +26,7 @@ export default function SquareCard({
   icon: Icon, // Destructure the icon for rendering
   title,
   container,
+  flexprop,
 }: SquareCardProps) {
   return (
     <div
@@ -43,7 +45,7 @@ export default function SquareCard({
           className="object-cover w-full h-full"
         />
       ) : (
-        <div className="flex flex-row items-center gap-4 ">
+        <div className={cn("flex flex-row items-center gap-4 ",flexprop)}>
           {avatar && (
             <Image
               src={avatar}

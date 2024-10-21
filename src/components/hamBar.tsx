@@ -66,18 +66,18 @@ export default function HamBar() {
       <div
         className={`${
           isNavOpen ? "flex" : "hidden"
-        } fixed inset-0 bg-no-repeat bg-cover z-50 flex-col items-start px-10 gap-8 py-10`}
+        } fixed inset-0 bg-no-repeat bg-cover z-50 flex-col items-start px-10 gap-[24px] py-10`}
         style={{
           backgroundImage: 'url("/ham.png")',
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       >
-        <div className="flex gap-[580px] justify-between">
+        <div className="flex ">
         <img src="/logo2.png" alt="Santech Logo" className="mb-8" />
         <X
           className="
-           w-full h-10  text-white cursor-pointer"
+           w-[30px] h-[30px] text-white cursor-pointer"
           onClick={() => setIsNavOpen(false)}
         />
         </div>
