@@ -22,7 +22,7 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
   return (
     <div className="md:py-[80px] lg:px-[80px] md:px-[32px] px-[24px] py-0 bg-white">
       {/* Heading Section */}
-      <div className="flex lg:flex-row lg:justify-between flex-col items-center py-[24px]">
+      <div className="flex md:flex-row md:justify-between flex-col items-center py-[24px]">
         <h2 className="text-[24px] lg:text-[36px] font-[600] text-center text-gray-800">
           {heading}
         </h2>
@@ -52,7 +52,7 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
       <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="flex flex-col items-center md:flex-row gap-6 overflow-x-hidden no-scrollbar scroll-smooth"
+          className="flex flex-col items-center justify-between md:flex-row gap-6  overflow-x-hidden no-scrollbar scroll-smooth"
         >
           {services.map((service) => (
             <div

@@ -2,19 +2,20 @@ import React from "react";
 
 export default function OverlappingSection() {
   return (
-    <div className="relative w-full h-[600px] px-[80px] py-[40px]">
+    <div className="  flex">    
+      <div className="relative w-full  px-[80px] py-[40px]">
       {/* Background Image */}
 
-      <div className="flex justify-end items-baseline">
+      <div className="  justify-end flex ">
         <img
           src="/about/overlap.png" // Replace with your image path
           alt="Overlapping Section"
-          className="w-[60%] object-cover"
+          className=" object-cover w-[847px] h-[600px]"
         />
       </div>
 
       {/* Overlay Text Section */}
-      <div className="absolute top-[46%] left-[10%] -translate-y-1/2 bg-white  rounded-lg shadow-lg w-[44%] h-[400px] p-8">
+      <div className="absolute top-[47%] right-[45%] -translate-y-[45%] bg-white  rounded-lg shadow-lg w-[630px] h-[490px] p-8">
         <h2 className="text-3xl font-semibold text-black mb-4">
           Empowering Businesses with Tailored Tech Solutions That Drive Growth
         </h2>
@@ -30,5 +31,7 @@ export default function OverlappingSection() {
         </button>
       </div>
     </div>
+    </div>
+
   );
 }

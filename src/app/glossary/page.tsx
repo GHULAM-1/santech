@@ -5,8 +5,9 @@ export default function GlossaryPage() {
   return (
 
     <div>
-        {/* <Hero backgroundImage="/glossaryHero.png" heading="Glossary" description="Clear Definitions for All Key Terms and Concepts You Need to Know"/> */}
-      
+      <div className="w-full">
+        <Hero backgroundImage="/glossaryHero.png" heading="Glossary" description="Clear Definitions for All Key Terms and Concepts You Need to Know"/>
+        </div>
       <Glossary />
     </div>
   );

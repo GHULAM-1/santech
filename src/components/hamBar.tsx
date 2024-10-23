@@ -2,6 +2,7 @@
 import { Equal, X, ChevronDown ,Menu  } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function HamBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -55,10 +56,10 @@ export default function HamBar() {
             className={`${!isNavOpen ? "flex" : "hidden"} cursor-pointer`}
             onClick={() => setIsNavOpen(true)}
           />
-          <X
+          {/* <X
             className={`${isNavOpen ? "flex" : "hidden"} cursor-pointer text-white`}
             onClick={() => setIsNavOpen(false)}
-          />
+          /> */}
         </div>
       </div>
 
@@ -66,20 +67,24 @@ export default function HamBar() {
       <div
         className={`${
           isNavOpen ? "flex" : "hidden"
-        } fixed inset-0 bg-no-repeat bg-cover z-50 flex-col items-start px-10 gap-[24px] py-10`}
+        } fixed inset-0 bg-no-repeat bg-contain z-50 flex-col items-start px-4 gap-[24px] py-10`}
         style={{
           backgroundImage: 'url("/ham.png")',
-          backgroundPosition: "center",
+          backgroundPosition: "end",
           backgroundSize: "cover",
         }}
       >
-        <div className="flex ">
-        <img src="/logo2.png" alt="Santech Logo" className="mb-8" />
+        <div className="flex  justify-between items-center w-full">
+          <div className="">
+        <img  src="/logo2.png" alt="Santech Logo" className="mb-8 w-[154px] h-[31px]" />
+        </div>
+        <div className="w-[40px] h-[40px]">
         <X
           className="
-           w-[30px] h-[30px] text-white cursor-pointer"
+            text-white cursor-pointer p-[4px]"
           onClick={() => setIsNavOpen(false)}
         />
+        </div>
         </div>
 
         {/* Menu Links */}
@@ -97,24 +102,22 @@ export default function HamBar() {
           </div>
           {isServicesOpen && (
             <div className="ml-6 text-[24px] space-y-2 text-white">
-              <p
+              <Link href="/">              <p
                 className="cursor-pointer hover:text-blue-600"
                 onClick={() => handleNavigation("/services/web-development")}
               >
                 Web Development
               </p>
+              </Link>
+              <Link href="/"> 
               <p
                 className="cursor-pointer hover:text-blue-600"
                 onClick={() => handleNavigation("/services/mobile-development")}
               >
                 Mobile Development
               </p>
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/services/digital-marketing")}
-              >
-                Digital Marketing
-              </p>
+              </Link>
+              
             </div>
           )}
         </div>
@@ -129,24 +132,15 @@ export default function HamBar() {
           </div>
           {isResourcesOpen && (
             <div className="ml-6 space-y-2 text-[24px] text-white">
+              <Link href="/glossary"> 
               <p
                 className="cursor-pointer hover:text-blue-600"
                 onClick={() => handleNavigation("/resources/blog")}
               >
-                Blog
+                Glossary
               </p>
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/resources/guides")}
-              >
-                Guides
-              </p>
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/resources/case-studies")}
-              >
-                Case Studies
-              </p>
+              </Link>
+              
             </div>
           )}
         </div>

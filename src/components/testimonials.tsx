@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
                headclr="font-[600]"
             />
 
-            <div className="-mt-0 md:-mt-[153px]">
+            <div className="-mt-0 md:-mt-[133px]">
           <SquareCard
             name={firstTestimonial.name}
             role={firstTestimonial.role}

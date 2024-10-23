@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationMenuDemo } from "./navigationDropDwon";
+import Navbar from "./navigationDropDwon";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -7,12 +7,14 @@ export default function NavBar() {
   return (
     <>
       <div className="flex justify-between px-[73px] gap-[8px] items-center py-5">
-        <div className="flex items-center gap-[56px]">
+        <div className="flex gap-[56px] items-end">
           <div>
+            <a href="/">
             <img className="w-[150PX] h-[32px]" src="/Logo.png" alt="" />
+            </a>
           </div>
           <div>
-            <NavigationMenuDemo />
+            <Navbar/>
           </div>
         </div>
         <div>

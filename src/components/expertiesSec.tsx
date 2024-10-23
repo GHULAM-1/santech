@@ -37,7 +37,7 @@ export default function FeaturedSection({
       </div>
 
       {/* Image Section */}
-      <div className="w-full lg:w-1/2 relative h-[360px] lg:h-auto">
+      <div className="w-full relative h-[360px] lg:h-auto">
         <Image
           src={image}
           alt="Real Estate"

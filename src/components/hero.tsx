@@ -14,21 +14,21 @@ export default function Hero({
   return (
     
     <div
-      className="hero-section flex flex-col justify-start items-start  lg:h-screen px-[80px] md:px-12"
+      className="hero-section flex flex-col items-start md:px-[32px] px-[24px] lg:px-[80px]"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "contain",
-        backgroundPosition: "end",
+        backgroundSize: "cover",
+        
         backgroundRepeat: "no-repeat",
       }}
     >
       {heading && (
-        <h1 className="text-white text-4xl md:text-[48px] font-semibold leading-snug mb-4 md:w-[740px] mt-24 ">
+        <h1 className="text-white text-[30px] lg:leading-[48px] leading-[36px] md:text-[30px] lg:text-[48px] font-semibold  mb-4  mt-24 ">
           {heading}
         </h1>
       )}
       {description && (
-        <p className="text-neutral-300 text-lg md:text-xl max-w-[600px]">
+        <p className="text-neutral-300 text-[20px] leadin-[28px] font-[400 ] max-w-[600px] mb-2">
           {description}
         </p>
       )}
@@ -38,11 +38,11 @@ export default function Hero({
       )}
 
       {showClients && (
-        <div className="mt-24 flex items-center gap-4 w-[329px]">
-         <div className="flex flex-row items-center justify-start mb-10 w-full">
+        <div className="mt-3 md:mt-24 flex flex-col md:flex-row md:items-center w-full gap-2 md:gap-8">
+         <div className="flex flex-row items-center justify-start mb-0 md:mb-10 ">
              <AnimatedTooltip items={people} />
         </div>
-          <p className="text-white text-sm w-full mb-8">
+          <p className="text-white text-[12px] w-[70%] md:w-full mb-8">
             Trusted by Over 10,000+ Active Clients Worldwide
           </p>
         </div>

@@ -25,6 +25,12 @@ export const servicesData = [
     description: "Specialized real estate technology solutions.",
     icon: <FaCog />,
   },
+  {
+    id: 5,
+    title: "App Development",
+    description: "Specialized real estate technology solutions.",
+    icon: <FaMobileAlt />,
+  },
   // Add more services if needed
 ];
 

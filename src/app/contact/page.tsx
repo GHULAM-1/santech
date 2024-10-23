@@ -20,11 +20,13 @@ export default function ContactUs() {
     <>
 
     <div className="overflow-x-hidden">
-      {/* <Hero
+      <div className="w-full">
+      <Hero
         backgroundImage="/contactHero.png"
         description="Got questions, inquiries, or need support? We're here to help, anytime!"
         heading="Contact Us"
-      /> */}
+      />
+      </div>
 
       <div className="p-[24px] lg:px-0">
       <CalCom />
