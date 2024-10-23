@@ -1,5 +1,5 @@
 "use client";
-import { Equal, X, ChevronDown ,Menu  } from "lucide-react";
+import { Equal, X, ChevronDown, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -49,7 +49,11 @@ export default function HamBar() {
           className="img w-full cursor-pointer"
           onClick={() => handleNavigation("/")}
         >
-          <img className="w-[115px] h-[23px]" src="/logo.png" alt="Santech Logo" />
+          <img
+            className="w-[115px] h-[23px]"
+            src="/Logo.png"
+            alt="Santech Logo"
+          />
         </div>
         <div className="flex items-center gap-8 text-primary">
           <Menu
@@ -76,48 +80,62 @@ export default function HamBar() {
       >
         <div className="flex  justify-between items-center w-full">
           <div className="">
-        <img  src="/logo2.png" alt="Santech Logo" className="mb-8 w-[154px] h-[31px]" />
-        </div>
-        <div className="w-[40px] h-[40px]">
-        <X
-          className="
+            <img
+              src="/logo2.png"
+              alt="Santech Logo"
+              className="mb-8 w-[154px] h-[31px]"
+            />
+          </div>
+          <div className="w-[40px] h-[40px]">
+            <X
+              className="
             text-white cursor-pointer p-[4px]"
-          onClick={() => setIsNavOpen(false)}
-        />
-        </div>
+              onClick={() => setIsNavOpen(false)}
+            />
+          </div>
         </div>
 
         {/* Menu Links */}
-        <div onClick={() => handleNavigation("/")} className={navLinksClassName}>
+        <div
+          onClick={() => handleNavigation("/")}
+          className={navLinksClassName}
+        >
           Home
         </div>
 
         {/* Services Dropdown */}
         <div className="relative">
-          <div
-            onClick={() => toggleDropdown("services")}
-            className={`${navLinksClassName} flex items-center gap-2`}
-          >
-            Services <ChevronDown />
-          </div>
+          <Link href="/services">
+            {" "}
+            <div
+              onClick={() => toggleDropdown("services")}
+              className={`${navLinksClassName} flex items-center gap-2`}
+            >
+              Services <ChevronDown />
+            </div>
+          </Link>
+
           {isServicesOpen && (
             <div className="ml-6 text-[24px] space-y-2 text-white">
-              <Link href="/">              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/services/web-development")}
-              >
-                Web Development
-              </p>
+              <Link href="/">
+                {" "}
+                <p
+                  className="cursor-pointer hover:text-blue-600"
+                  onClick={() => handleNavigation("/services/web-development")}
+                >
+                  Web Development
+                </p>
               </Link>
-              <Link href="/"> 
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/services/mobile-development")}
-              >
-                Mobile Development
-              </p>
+              <Link href="/">
+                <p
+                  className="cursor-pointer hover:text-blue-600"
+                  onClick={() =>
+                    handleNavigation("/services/mobile-development")
+                  }
+                >
+                  Mobile Development
+                </p>
               </Link>
-              
             </div>
           )}
         </div>
@@ -132,23 +150,28 @@ export default function HamBar() {
           </div>
           {isResourcesOpen && (
             <div className="ml-6 space-y-2 text-[24px] text-white">
-              <Link href="/glossary"> 
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => handleNavigation("/resources/blog")}
-              >
-                Glossary
-              </p>
+              <Link href="/glossary">
+                <p
+                  className="cursor-pointer hover:text-blue-600"
+                  onClick={() => handleNavigation("/resources/blog")}
+                >
+                  Glossary
+                </p>
               </Link>
-              
             </div>
           )}
         </div>
 
-        <div onClick={() => handleNavigation("/about")} className={navLinksClassName}>
+        <div
+          onClick={() => handleNavigation("/about")}
+          className={navLinksClassName}
+        >
           About
         </div>
-        <div onClick={() => handleNavigation("/contact")} className={navLinksClassName}>
+        <div
+          onClick={() => handleNavigation("/contact")}
+          className={navLinksClassName}
+        >
           Contact
         </div>
       </div>
