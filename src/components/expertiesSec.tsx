@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link';
 
 interface SectionProps {
   title: string;
@@ -31,9 +32,11 @@ export default function FeaturedSection({
         </h1>
         <p className="text-[16px] leading-[24px] font-[400]  text-#FDFCFB">{description}</p>
 
+        <Link href="/contact">
         <Button className="bg-accent w-[110px] px-[20px] py-[12px] text-[14px] hover:bg-green-600 text-black font-medium rounded-[4px]">
           {buttonText} <span><ArrowRight/></span>
         </Button>
+        </Link>
       </div>
 
       {/* Image Section */}

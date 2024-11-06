@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link';
 
 export default function LetsTalk() {
   return (
@@ -9,9 +10,11 @@ export default function LetsTalk() {
         <h2 className="text-2xl md:text-[36px] font-semibold text-[#16339C] leading-[32px]">
           Ready to Transform Your Business?
         </h2>
+        <Link href="/contact">
         <button className="flex items-center text-2xl md:text-[36px] font-[400] text-black hover:underline">
           Let’s Talk <span className="ml-2 font-[400]"><ArrowRight/></span>
         </button>
+        </Link>
       </div>
       <img
         src="/CTA.png"

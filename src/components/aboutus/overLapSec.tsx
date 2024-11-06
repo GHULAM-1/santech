@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function OverlappingSection() {
   return (
@@ -26,9 +27,11 @@ export default function OverlappingSection() {
           to understanding your unique needs, streamlining your operations, and
           scaling your business with cutting-edge technology.
         </p>
+        <Link href="/contact">
         <button className="bg-green-500 text-black py-2 px-4  hover:bg-green-600 transition">
           Get Started →
         </button>
+        </Link>
       </div>
     </div>
     </div>

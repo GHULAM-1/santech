@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./navigationDropDwon";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -18,10 +19,12 @@ export default function NavBar() {
           </div>
         </div>
         <div>
+          <Link href="/contact">
           <Button className="bg-[#16339C] text-[14px] text-white">
             Get Started
             <ArrowRight />
           </Button>
+          </Link>
         </div>
       </div>
     </>

@@ -3,6 +3,7 @@ import React from "react";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { people } from "@/data/clientsData";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Hero({
   heading,
@@ -34,7 +35,9 @@ export default function Hero({
       )}
 
       {showButton && (
+        <Link href="/contact">
         <Button className=" bg-[#05DC75] text-black mt-6">Get Started</Button>
+        </Link>
       )}
 
       {showClients && (
