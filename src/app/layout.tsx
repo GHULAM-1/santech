@@ -28,7 +28,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "San Tech",
+  title: "Santech",
   description: "San Tech is a leading software development company offering custom software, website development, mobile apps, AI solutions, and drag-and-drop website builders to help businesses grow and succeed.",
 
   keywords: "San Tech, website Development, developement , Software Company, Gamma, Developer,Property Dealers,Property ,Property Management,Bisma Emar,Sanan, development",
