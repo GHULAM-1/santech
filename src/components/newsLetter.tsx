@@ -12,7 +12,7 @@ export default function NewsletterPopup() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 5000); // Show popup after 5 seconds
+    }, 5000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,12 +25,19 @@ export default function NewsletterPopup() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/subscribe", {
+      const response = await fetch("https://sheetdb.io/api/v1/edj5b3kqockge", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          data: [
+            {
+              email
+            }
+          ]
+        }),
       });
 
       const data = await response.json();
@@ -40,8 +47,8 @@ export default function NewsletterPopup() {
       }
 
       setMessage("Thank you for subscribing!");
-      
-      // Close popup after showing success message
+
+
       setTimeout(() => setShowPopup(false), 1000);
     } catch (error: any) {
       setMessage(error.message);
