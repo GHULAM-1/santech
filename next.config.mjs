@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['images.unsplash.com'], // Add the required domain here
-    },
+  images: {
+    domains: ["images.unsplash.com", "uithemez.com", "cdn.sanity.io"],
+  },
   };
   
   export default nextConfig;

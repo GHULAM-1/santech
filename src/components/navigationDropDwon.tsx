@@ -38,13 +38,13 @@ export default function Navbar() {
     <nav className="relative">
       <div className="flex justify-between items-center">
         <ul className="flex space-x-6 items-center text-[16px] font-[400]">
-          <li>
+          <li className="hover:text-blue-500">
             <Link href="/">Home</Link>
           </li>
 
           {/* Services Dropdown */}
           <li
-            className="relative"
+            className="relative "
             onMouseEnter={() =>
               handleMouseEnter(setShowServices, servicesTimeoutRef)
             }
@@ -76,7 +76,7 @@ export default function Navbar() {
 
           {/* Resources Dropdown */}
           <li
-            className="relative"
+            className="relative "
             onMouseEnter={() =>
               handleMouseEnter(setShowResources, resourcesTimeoutRef)
             }
@@ -94,18 +94,21 @@ export default function Navbar() {
             </button>
             {showResources && (
               <ul className="absolute bg-white shadow-lg rounded-md mt-2 w-40">
-                <li className="px-4 py-2 hover:bg-[#B7C0E0]">
+                <li className="px-4 py-2 hover:bg-[#B7C0E0] ">
                   <Link href="/glossary">Glossary</Link>
                 </li>
               </ul>
             )}
           </li>
 
-          <li>
+          <li className="hover:text-blue-500">
             <Link href="/about">About</Link>
           </li>
-          <li>
+          <li className="hover:text-blue-500">
             <Link href="/contact">Contact</Link>
+          </li>
+          <li className="hover:text-blue-500">
+            <Link href="/blog">Blogs</Link>
           </li>
         </ul>
       </div>

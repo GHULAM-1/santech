@@ -1,4 +1,4 @@
-interface PageHeadingProps {
+export type PageHeadingProps= {
     heading: string | undefined;
     description: string | undefined;
     backgroundImage: string; 
@@ -52,6 +52,30 @@ interface GlossaryItem {
   title: string;
   description: string;
 }
+
+export type blogCardsDataT = {
+  authorName: string;
+  bannerImage: string;
+  estimatedReadingTime: string;
+  mainHeading: string;
+  publishedAt: string;
+  slug: string;
+  tag: string;
+};
+
+
+export type BlogType = {
+  image: string;
+  mainText: string;
+  ownerName: string;
+  ownerImage: string;
+  date: string;
+  timeToRead: string;
+  slug: string;
+};
+
+
+
 
 interface GlossaryGroup {
   letter: string;

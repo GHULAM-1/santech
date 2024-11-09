@@ -10,14 +10,15 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
     if (scrollContainerRef.current) {
       const { current } = scrollContainerRef;
       const scrollAmount = current.clientWidth;
-
+  
       if (direction === "left") {
-        current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        current.scrollLeft -= scrollAmount;
       } else {
-        current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        current.scrollLeft += scrollAmount;
       }
     }
   };
+  
 
   return (
     <div className="md:py-[80px] lg:px-[80px] md:px-[32px] px-[24px] py-0 bg-white">
@@ -57,7 +58,7 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
           {services.map((service) => (
             <div
               key={service.id}
-              className="w-[272px] md:w-[305px] md:min-w-[310px] h-[400px] p-6 border-[2px] border-[#BBBEC3] shadow-sm hover:shadow-lg transition-shadow"
+              className="w-[272px] md:w-[305px] md:min-w-[310px] h-[400px] p-6 border-[2px] border-[#BBBEC3] shadow-sm hover:shadow-lg transition-shadow hover:border-[#05DC75] group"
             >
               <div className="text-6xl w-[80px] h-[80px] text-[#16339C] pb-[32px]">{service.icon}</div>
               <h3 className="text-[24px] font-semibold text-[#16339C] leading-[32px]">
@@ -65,8 +66,8 @@ const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' 
               </h3>
               <p className="text-[16px] text-black leading-[24px] font-[400]">{service.description}</p>
               <div className="flex justify-end items-end mt-28">
-                <button className="bg-accent w-[48px] h-[48px] self-end rounded-full flex items-center justify-center hover:bg-accent">
-                  <FaArrowRight className="text-[#040817]" />
+                <button className="bg-accent w-[48px] h-[48px] self-end rounded-full flex items-center justify-center hover:bg-accent ">
+                  <FaArrowRight className="text-[#040817] ease-in-out duration-500 group-hover:-rotate-45" />
                 </button>
               </div>
             </div>

@@ -9,7 +9,7 @@ import LetsTalk from "@/components/letsTalk";
 export default function AboutPage() {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full ">
       <Hero
         backgroundImage="/aboutHero.png"
         heading="About Us"

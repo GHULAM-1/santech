@@ -71,7 +71,7 @@ export default function HamBar() {
       <div
         className={`${
           isNavOpen ? "flex" : "hidden"
-        } fixed inset-0 bg-no-repeat bg-contain z-50 flex-col items-start px-4 gap-[24px] py-10`}
+        } fixed inset-0 bg-no-repeat bg-contain z-50 flex-col items-start px-4 gap-[18px] py-10`}
         style={{
           backgroundImage: 'url("/ham.png")',
           backgroundPosition: "end",
@@ -173,6 +173,12 @@ export default function HamBar() {
           className={navLinksClassName}
         >
           Contact
+        </div>
+        <div
+          onClick={() => handleNavigation("/blog")}
+          className={navLinksClassName}
+        >
+          Blogs
         </div>
       </div>
     </>

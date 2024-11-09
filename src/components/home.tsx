@@ -12,6 +12,7 @@ import IndustrySolutions from "./solution";
 import TestimonialsSection from "./testimonials";
 import BookMeeting from "./bookMeeting";
 import LetsTalk from "./letsTalk";
+import NewsletterPopup from "./newsLetter";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
       <BookMeeting />
 
       <LetsTalk />
+      <NewsletterPopup/>
     </>
   );
 }

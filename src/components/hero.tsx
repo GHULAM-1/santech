@@ -4,6 +4,7 @@ import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { people } from "@/data/clientsData";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { PageHeadingProps } from "@/types/all-types";
 
 export default function Hero({
   heading,
@@ -29,7 +30,7 @@ export default function Hero({
         </h1>
       )}
       {description && (
-        <p className="text-neutral-300 text-[20px] leadin-[28px] font-[400 ] max-w-[600px] mb-2">
+        <p className="text-neutral-300 text-[20px] leadin-[28px] font-[400 ] max-w-[600px] mb-5">
           {description}
         </p>
       )}
