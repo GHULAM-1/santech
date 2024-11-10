@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Button } from "./ui/button";
+import { ServicesProps } from "@/types/all-types";
 
 const Services: React.FC<ServicesProps> = ({ services, heading = 'Our Services' }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

@@ -6,31 +6,31 @@ export type PageHeadingProps= {
     showClients?: boolean; 
   }
 
-  interface AboutUsProps {
+  export type  AboutUsProps =  {
     title: string;
     description: string[];
     image: string;
   }
 
   
-interface Service {
+export type  Service = {
   id: number;
   title: string;
   description: string;
   icon: React.ReactNode;
 }
 
-interface ServicesProps {
+export type  ServicesProps = {
   services: Service[];
   heading?:string
 }
 
-interface ImageCardProps {
+export type  ImageCardProps = {
   image: string;
   description?: string;
   extraClass?: string;
 }
-interface TextCardProps {
+export type  TextCardProps = {
   title: string;
   description?: string;
   bgColor?: string;
@@ -42,13 +42,13 @@ type ValueCardProps = {
   bgImage: string;
 };
 
-// Props type for the ValuesSection
-type ValuesSectionProps = {
+
+export type ValuesSectionProps = {
   values: ValueCardProps[];
   containerGap?: string;
 };
 
-interface GlossaryItem {
+export type  GlossaryItem = {
   title: string;
   description: string;
 }
@@ -77,7 +77,7 @@ export type BlogType = {
 
 
 
-interface GlossaryGroup {
+export type  GlossaryGroup = {
   letter: string;
   items: GlossaryItem[];
 }

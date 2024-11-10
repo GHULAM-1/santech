@@ -1,4 +1,5 @@
 import React from "react";
+import { AboutUsProps } from "@/types/all-types";
 const AboutUs: React.FC<AboutUsProps> = ({ title, description, image }) => {
   return (
     <div className="flex flex-col  lg:flex-row items-center justify-between bg-[#E8EBF5]  ">

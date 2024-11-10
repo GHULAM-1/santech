@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-
+import { ImageCardProps } from '@/types/all-types';
 
 
 const ImageCard: React.FC<ImageCardProps> = ({

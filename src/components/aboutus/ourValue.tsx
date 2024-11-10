@@ -1,6 +1,6 @@
 // components/ValuesSection.tsx
 import React from "react";
-
+import { ValuesSectionProps } from "@/types/all-types";
 const ValuesSection: React.FC<ValuesSectionProps> = ({
   values,
   containerGap = "6",

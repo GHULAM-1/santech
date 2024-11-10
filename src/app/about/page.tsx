@@ -6,6 +6,9 @@ import OverlappingSection from "@/components/aboutus/overLapSec";
 import ValuesSection from "@/components/aboutus/ourValue";
 import { valuesData } from "@/data/valuCardData";
 import LetsTalk from "@/components/letsTalk";
+export const metadata = {
+  title: "About",
+};
 export default function AboutPage() {
   return (
     <>
