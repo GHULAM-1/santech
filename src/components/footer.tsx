@@ -11,6 +11,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import FooterNewsletterForm from "./footerNewsLetter";
 
 export default function Footer() {
   return (
@@ -43,7 +44,7 @@ export default function Footer() {
               </button>
             </Link>
 
-            <div className="flex items-center gap-4">
+            <div className="flex  items-center gap-4">
               <FiMail className="w-[40px] h-[40px] cursor-pointer bg-[#05DC75]  text-black hover:bg-white rounded-sm p-1  ease-in-out duration-700 delay-200" />
               <FiTwitter className="w-[40px] h-[40px] cursor-pointer bg-[#05DC75]  text-black hover:bg-white rounded-sm p-1 ease-in-out duration-700 delay-200" />
 
@@ -52,6 +53,7 @@ export default function Footer() {
               <FaWhatsapp className="w-[40px] h-[40px] cursor-pointer bg-[#05DC75]  text-black hover:bg-white rounded-sm p-1 ease-in-out duration-700 delay-200" />
             </div>
           </div>
+            <FooterNewsletterForm/>
         </div>
 
         {/* Sitemap */}
@@ -104,6 +106,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+        
     </footer>
   );
 }
