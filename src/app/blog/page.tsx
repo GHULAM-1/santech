@@ -18,7 +18,7 @@ export default async function Blog() {
     //     description="Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs."
     //     heading="We are a digital agency for visually compelling about stories Hubfolio."
     //   />
-      <div className="text-black lg:px-3 flex justify-center lg:justify-start  md:w-full gap-12 flex-wrap mt-16 mb-36 ">
+      <div className="text-black  flex justify-center   md:w-full gap-12 flex-wrap mt-16 mb-36 ">
         {blogCardsData.map((blog: blogCardsDataT, index) => {
           return (
             <div className=" flex flex-row gap-12 ">

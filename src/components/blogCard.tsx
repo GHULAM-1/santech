@@ -19,7 +19,7 @@ console.log("Sanity Token (Server Only):", process.env.SANITY_API_TOKEN);
 
   return (
     <>
-      <a href={`/blog/${slug}`} className="w-[180px] md:w-[365px] flex flex-col gap-5">
+      <a href={`/blog/${slug}`} className="w-full p-3 md:p-0 md:w-[365px] flex flex-col gap-5">
         
         <div className="flex justify-between w-full">
           <div className="flex w-full gap-3 ">
