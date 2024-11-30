@@ -81,3 +81,27 @@ export type  GlossaryGroup = {
   letter: string;
   items: GlossaryItem[];
 }
+
+export type subHeading = {
+  title: string;
+  description: string; 
+};
+
+
+export type aserviceType = {
+  id: number;
+  serviceName: string;
+  bannerImg?: string;
+  resultImage?: string;
+  heroTitle: string;
+  heroDescription: string;
+  featureHeading: string;
+  cards: {  
+    icon: React.ReactNode;
+    heading: string;
+    description: string;
+  }[];
+  outcomeheading: string;
+  outcomes?:string[];
+};
+

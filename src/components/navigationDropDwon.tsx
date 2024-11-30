@@ -3,8 +3,8 @@
 import { useState, Dispatch, SetStateAction, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-
-// Type alias for the setState function
+import { aserviceData } from "@/data/aserviceData";
+import { aserviceType } from "@/types/all-types";
 type SetStateBoolean = Dispatch<SetStateAction<boolean>>;
 
 export default function Navbar() {
@@ -64,12 +64,15 @@ export default function Navbar() {
             </Link>
             {showServices && (
               <ul className="absolute bg-white shadow-lg rounded-md mt-2 w-40">
-                <li className="px-4 py-2 hover:bg-[#B7C0E0]">
-                  <Link href="/service1">Service1</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-[#B7C0E0]">
-                  <Link href="/service2">Service2</Link>
-                </li>
+                {aserviceData.map((service:aserviceType) => (
+                  <li key={service.id} className="px-4 py-2 hover:bg-[#B7C0E0]">
+                    <Link
+                      href={`/services/${service.id }`}
+                    >
+                      {service.serviceName}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             )}
           </li>
@@ -97,6 +100,7 @@ export default function Navbar() {
                 <li className="px-4 py-2 hover:bg-[#B7C0E0] ">
                   <Link href="/glossary">Glossary</Link>
                 </li>
+                {/* Add more resources here if needed */}
               </ul>
             )}
           </li>

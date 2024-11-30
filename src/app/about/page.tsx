@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Hero
         backgroundImage="/aboutHero.png"
         heading="About Us"
-        description="Got questions, inquiries, or need support? We're here to help, anytime!"
+        description="Discover Who We Are and How We Drive Innovation in Technology Solutions."
         showButton={false}
         showClients={false}
       />

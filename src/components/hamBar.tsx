@@ -1,8 +1,9 @@
 "use client";
-import { Equal, X, ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { aserviceData } from "@/data/aserviceData";// Import the service data
 
 export default function HamBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -60,10 +61,6 @@ export default function HamBar() {
             className={`${!isNavOpen ? "flex" : "hidden"} cursor-pointer`}
             onClick={() => setIsNavOpen(true)}
           />
-          {/* <X
-            className={`${isNavOpen ? "flex" : "hidden"} cursor-pointer text-white`}
-            onClick={() => setIsNavOpen(false)}
-          /> */}
         </div>
       </div>
 
@@ -78,7 +75,7 @@ export default function HamBar() {
           backgroundSize: "cover",
         }}
       >
-        <div className="flex  justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full">
           <div className="">
             <img
               src="/logo2.png"
@@ -88,8 +85,7 @@ export default function HamBar() {
           </div>
           <div className="w-[40px] h-[40px]">
             <X
-              className="
-            text-white cursor-pointer p-[4px]"
+              className="text-white cursor-pointer p-[4px]"
               onClick={() => setIsNavOpen(false)}
             />
           </div>
@@ -105,37 +101,28 @@ export default function HamBar() {
 
         {/* Services Dropdown */}
         <div className="relative">
-          <Link href="/services">
-            {" "}
-            <div
-              onClick={() => toggleDropdown("services")}
-              className={`${navLinksClassName} flex items-center gap-2`}
-            >
-              Services <ChevronDown />
-            </div>
-          </Link>
+          <div
+            onClick={() => toggleDropdown("services")}
+            className={`${navLinksClassName} flex items-center gap-2`}
+          >
+            Services <ChevronDown />
+          </div>
 
           {isServicesOpen && (
             <div className="ml-6 text-[24px] space-y-2 text-white">
-              <Link href="/">
-                {" "}
-                <p
-                  className="cursor-pointer hover:text-blue-600"
-                  onClick={() => handleNavigation("/services/web-development")}
+              {aserviceData.map((service) => (
+                <Link
+                  key={service.id}
+                  href={`/services/${service.id}`}
                 >
-                  Web Development
-                </p>
-              </Link>
-              <Link href="/">
-                <p
-                  className="cursor-pointer hover:text-blue-600"
-                  onClick={() =>
-                    handleNavigation("/services/mobile-development")
-                  }
-                >
-                  Mobile Development
-                </p>
-              </Link>
+                  <p
+                    className="cursor-pointer hover:text-blue-600"
+                    onClick={() => handleNavigation(`/services/${service.id}`)}
+                  >
+                    {service.serviceName}
+                  </p>
+                </Link>
+              ))}
             </div>
           )}
         </div>

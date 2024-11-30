@@ -6,7 +6,7 @@ export default function HomeHero() {
     <>
     <div className="w-full">
     <Hero backgroundImage="/Hero.png" heading="Transforming Businesses with Cutting-Edge Tech Solutions."
-    description="From app development to automation and digital growth strategies, Santech delivers innovative technology services to drive your business forward."
+    description="Delivering customized tech solutions in app/web development, automation, digital growth, and real estate."
     showButton={true} 
      showClients={true}
     
